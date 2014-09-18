@@ -6,7 +6,7 @@ class DateIterator
     raise ArgumentError if from > to
     each_year(from, to) do |year|
       each_month do |month, month_index|
-        days = number_of_days_for_month(month, year)  
+        days = number_of_days_for_month(month, year)
         yield days, month_index, year
       end
     end     
