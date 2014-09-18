@@ -1,4 +1,4 @@
-# Grabber
+# Grabber [![Build Status](https://travis-ci.org/cghsystems/grabber.svg)](https://travis-ci.org/cghsystems/grabber)
 
 A tool to export account information from Lloyds TSB Online.
 
