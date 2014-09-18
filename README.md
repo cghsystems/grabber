@@ -17,3 +17,7 @@ secret: $your_account_secret
 Run `bundle exec ruby lib/grabber.rb`
 
 The output of the prgram will be a file called finances.json. The file contains an array of JSON objects. Each memeber of the array represents 1 line as taken from each CSV file exported.
+
+
+### Testing 
+Tests are written in rspec and can be run with the standard `rspec` command
