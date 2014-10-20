@@ -5,8 +5,8 @@ module Transform
     # Therefore spurious characters are removed to make the csv content easier to
     # manipulate
     def clean(data)
-      data.gsub(/'30-25-80/, '30-25-80')
-      .gsub(/30-25-80'/, '30-25-80')
+      data.gsub(/'99-99-99/, '99-99-99')
+      .gsub(/99-99-99'/, '99-99-99')
       .gsub(/Balance,/, 'Balance')
       .gsub(/"/, "")
     end

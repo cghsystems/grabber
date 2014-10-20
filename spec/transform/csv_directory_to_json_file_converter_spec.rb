@@ -30,13 +30,13 @@ describe Transform::CsvDirectoryToJsonFileConverter do
 
       it 'each record should contain the expected account number' do
         json_output.each do |record|
-          expect(record.fetch('account_number')).to eql('02392038')
+          expect(record.fetch('account_number')).to eql('1234567')
         end
       end
 
       it 'each record should contain the expected sort code' do
         json_output.each do |record|
-          expect(record.fetch('sort_code')).to eql('30-25-80')
+          expect(record.fetch('sort_code')).to eql('99-99-99')
         end
       end
 

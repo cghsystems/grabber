@@ -10,11 +10,11 @@ RSpec.shared_examples 'a financial record' do
   end
 
   it 'contains the expected account number' do
-    expect(record.fetch(:account_number)).to eql('02392038')
+    expect(record.fetch(:account_number)).to eql('1234567')
   end
 
   it 'contains the expected sort code' do
-    expect(record.fetch(:sort_code)).to eql('30-25-80')
+    expect(record.fetch(:sort_code)).to eql('99-99-99')
   end
 
   it 'contains the transaction date in rfc-3339 date format' do
@@ -54,7 +54,7 @@ describe Transform::CsvRowConverter do
     let(:csv_src) {
       <<csv
 Transaction Date,Transaction Type,Sort Code,Account Number,Transaction Description,Debit Amount,Credit Amount,Balance
-30/06/2005,DEB,30-25-80,02392038,WM MORRISON 076 CD 0329 ,10.01,0,-1413.64
+30/06/2005,DEB,99-99-99,1234567,WM MORRISON 076 CD 0329 ,10.01,0,-1413.64
 csv
     }
 
@@ -67,7 +67,7 @@ csv
     let(:csv_src) {
       <<csv
 Transaction Date,Transaction Type,Sort Code,Account Number,Transaction Description,Debit Amount,Credit Amount,Balance
-30/06/2005,DEB,30-25-80,02392038,WM MORRISON 076, CD 0329 ,10.01,0,-1413.64
+30/06/2005,DEB,99-99-99,1234567,WM MORRISON 076, CD 0329 ,10.01,0,-1413.64
 csv
     }
 
@@ -80,7 +80,7 @@ csv
     let(:csv_src) {
       <<csv
 Transaction Date,Transaction Type,Sort Code,Account Number,Transaction Description,Debit Amount,Credit Amount,Balance
-30/06/2005,DEB,30-25-80,02392038,WM MORRISON 076, CD 0329 ,10.01,0,-1413.64
+30/06/2005,DEB,99-99-99,1234567,WM MORRISON 076, CD 0329 ,10.01,0,-1413.64
 csv
     }
 
@@ -93,7 +93,7 @@ csv
     let(:csv_src) {
       <<csv
 Transaction Date,Transaction Type,Sort Code,Account Number,Transaction Description,Debit Amount,Credit Amount,Balance
-30/06/2005,DEB,30-25-80,02392038,WM MORRISON 076 CD 0329,,,
+30/06/2005,DEB,99-99-99,1234567,WM MORRISON 076 CD 0329,,,
 csv
     }
 
