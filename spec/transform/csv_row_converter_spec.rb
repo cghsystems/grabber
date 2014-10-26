@@ -105,7 +105,7 @@ csv
       expect(record.fetch(:credit_amount)).to eql(0.0)
     end
 
-    it 'should have 0debit amount' do
+    it 'should have 0 debit amount' do
       expect(record.fetch(:debit_amount)).to eql(0.0)
     end
   end
