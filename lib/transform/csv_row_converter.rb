@@ -81,7 +81,7 @@ module Transform
     end
 
     def transaction_description(transaction_description)
-      transaction_description.strip!
+      transaction_description.strip
     end
 
     def account_number(row)
