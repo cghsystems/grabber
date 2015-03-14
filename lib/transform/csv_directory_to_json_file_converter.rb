@@ -40,6 +40,5 @@ module Transform
       csv = CSV.new(csv_src, :headers => true, :header_converters => :symbol, :unconverted_fields => true)
       csv_row_converter.to_hash(csv)
     end
-
   end
 end

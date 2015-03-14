@@ -30,7 +30,7 @@ describe Transform::CsvDirectoryToJsonFileConverter do
 
       it 'each record should contain the expected account number' do
         json_output.each do |record|
-          expect(record.fetch('account_number')).to eql('1234567')
+          expect(record.fetch('account_number')).to eql('99-99-9967')
         end
       end
 

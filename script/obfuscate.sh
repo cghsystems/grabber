@@ -1,26 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env ruby
 
-extensions=(*.csv *.rb *.json)
+require_relative '../lib/obsfucate.rb'
+require 'json'
 
-echo "Please enter sort code to obfuscate"
-read sort_code
+target_file = File.expand_path(File.join(File.dirname(__FILE__), '..', 'finances2.json')) 
+json = JSON.parse(File.read(target_file))
+obsfucated = Obsfucate.new(json).obsfucate_data.to_json
+File.open('obsfucated.json', 'w') { |file| file.write(obsfucated) }
 
-echo "Please enter account number to obfuscate"
-read account_number
-
-obfuscate_sort_code() {
-  local ext=$1 
-  find ../ -type f -name ${ext} -exec sed -i '' s/${sort_code}/99-99-99/g {} +
-}
-
-obfuscate_account_number() {
-  local ext=$1 
-  find ../ -type f -name ${ext} -exec sed -i '' s/${account_number}/1234567/g {} +
-}
-
-for ext in "${extensions[@]}"
-do
-  echo "Will obfuscate extension ${ext}"
-  obfuscate_sort_code ${ext}
-  obfuscate_account_number ${ext}
-done
+puts 'Obsfucated finances2.json into obsfucated.json'
