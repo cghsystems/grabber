@@ -21,3 +21,6 @@ The output of the prgram will be a file called finances.json. The file contains 
 
 ### Testing 
 Tests are written in rspec and can be run with the standard `rspec` command
+
+
+{ background-image: url (http://static.squarespace.com/static/533c643fe4b07ef0e1fa025a/t/53430d09e4b0cf4885e8fa8f/1396903177465/Download-texture-gold-texture-texture-gold-gold-golden-background.jpg) }
