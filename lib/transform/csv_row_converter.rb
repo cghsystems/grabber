@@ -33,7 +33,7 @@ module Transform
       row = CSV::Row.new(row.headers, new_row, row.header_row?,)
       row.delete(8)
       row.delete(9)
-      row.to_h
+      row.to_hash
     end
 
     def convert_malformed_9_field_row_to_hash(row)
@@ -49,7 +49,7 @@ module Transform
 
       row = CSV::Row.new(row.headers, new_row, row.header_row?,)
       row.delete(8)
-      row.to_h
+      row.to_hash
     end
 
 
@@ -65,7 +65,7 @@ module Transform
       new_row[7] = account_balance(row[7])
 
       row = CSV::Row.new(row.headers, new_row, row.header_row?,)
-      row.to_h
+      row.to_hash
     end
 
     def account_balance(account_balance)
